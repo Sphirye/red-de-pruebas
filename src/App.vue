@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-main>
+      <SnackbarComponent/>
       <router-view/>
     </v-main>
   </v-app>
@@ -8,16 +9,15 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import SnackbarComponent from './components/SnackbarComponent.vue';
 import { mapState } from 'vuex';
 
 export default Vue.extend({
   name: 'App',
   computed: {
-    ...mapState(['posts'])
   },
   components: {
-    //HelloWorld,
+    SnackbarComponent
   },
 
   data: () => ({

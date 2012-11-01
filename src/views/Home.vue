@@ -3,8 +3,8 @@
     <v-main>
       <v-container grid-list-md>
         <v-layout row wrap>
-        <Feed/>
-        <UsersBar/>
+        <FeedComponent/>
+        <UsersBarComponent/>
         </v-layout>
       </v-container>
     </v-main>
@@ -14,14 +14,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import UsersBar from '@/components/UsersBar.vue'; // @ is an alias to /src
-import Feed from '@/components/Feed.vue';
+import UsersBarComponent from '@/components/UsersBarComponent.vue';
+import FeedComponent from '@/components/FeedComponent.vue';
 
 export default Vue.extend({
   name: 'Home',
   components: {
-    UsersBar,
-    Feed,
+    UsersBarComponent,
+    FeedComponent,
   },
 });
 </script>
