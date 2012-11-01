@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import tareas from './modules/tareas.ts'
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -132,9 +134,9 @@ export default new Vuex.Store({
       postId: undefined,
     },
     postDropdownList: [  //Lista de botones que irían sobre un dropdown en un post
-          {name: 'Editar', icon: 'mdi-lead-pencil'},
-          {name: 'Eliminar',  icon: 'mdi-comment-remove-outline'}
-        ]
+      {name: 'Editar', icon: 'mdi-lead-pencil'},
+      {name: 'Eliminar',  icon: 'mdi-comment-remove-outline'}
+    ],
   },
   getters: {
     getUserById: (state) => (userId: number) => {
@@ -290,5 +292,6 @@ export default new Vuex.Store({
     }
   },
   modules: {
+    tareas
   }
 })
